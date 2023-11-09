@@ -22,16 +22,27 @@ function aVeryBigSum(ar) {
 // *  2. INTEGER_ARRAY height
 // */
 
-function hurdleRace(k, height) {
-   //i want to get the highest number in the array and subtracy it by k
-    for(let i=0; i < height.length; i++) {
-        if(k > Math.max(...height)){
-            return 0
+function plusMinus(arr) {
+    //make number of neg and pos in array  into variables
+    let neg = 0
+    let pos = 0
+    let zer = 0
+    let n = arr.length
+
+    for(let i=0; i < arr.length; i++) {
+        if(arr[i] > 0) {
+            pos++
         }
-        else {
-               return Math.max(...height) - Math.min(k)
+        else if(arr[i] < 0) {
+            neg++
+            
         }
-           
+        else{
+            zer++
+        }
     }
+    console.log(pos / n) 
+    console.log(neg / n) 
+    console.log(zer / n) 
 
 }
