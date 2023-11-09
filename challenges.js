@@ -46,3 +46,27 @@ function plusMinus(arr) {
     console.log(zer / n) 
 
 }
+
+// *
+//  * Complete the 'bonAppetit' function below.
+//  *
+//  * The function accepts following parameters:
+//  *  1. INTEGER_ARRAY bill
+//  *  2. INTEGER k
+//  *  3. INTEGER b
+//  */
+
+function bonAppetit(bill, k, b) {
+    bill.splice(k, 1)
+    let tot_bill = 0
+    for(let i=0; i < bill.length; i++){
+        tot_bill += bill[i]
+    }
+    let annShare = b - (tot_bill / 2)
+    if(annShare === 0) {
+        console.log("Bon Appetit")
+    }
+    else{
+        console.log(annShare)
+    }
+}
